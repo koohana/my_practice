@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 Canvas</title>
+  <style>
+      svg {
+        border : 1px solid #aaa;
+      }
+      .rounded-rect{
+        fill: #94f22a;
+        stroke: #008b3f;
+        stroke-width: 8px;
+        x: 50px;
+        y: 50px;
+        rx: 40px;
+        ry: 40px;
+        width: 200px;
+        height: 200px;
+      }
+      .svg-circle{
+        r: 80px;
+        cx: 250px;
+        cy: 150px;
+        fill : #dd2727;
+        stroke: #e98080;
+        stroke-width: 10px;
+      }
+      .svg-ellipse{
+
+        fill: #514add;
+        stroke: #302d6c;
+        stroke-width: 10px;
+      }
+      .svg-ellipse:nth-child(2){
+        stroke: #302d6c;
+        stroke-width: 10px;
+        fill: #fff825;
+      }
+      .start-window{
+        fill: #fdfeea;
+        stroke: #302d6c;
+        stroke-width: 10px;
+      }
+      .dark-line{
+        stroke: blueviolet;
+        stroke-width: 14px;
+        stroke-linecap: round;
+      }
+      .big-dipper,
+      .big-dipper__dot{
+        transform: translate(38px, 110px);
+      }
+      .big-dipper{
+        fill: none;
+        stroke: #524579;
+        stroke-width: 3px;
+        stroke-linecap: round;
+      }
+      .big-dipper__dot {
+        fill: #fff;
+        stroke: #524579;
+        stroke-width: 4px;
+      }
+      .pentagon{
+        fill: #1b1464;
+        transform: translate(85px, 85px);
+      }
+      .triangle_fill{
+        fill: #3731ba;
+        transform: translate(-1px, -3px);
+      }
+      .pentagon2{
+        fill: #1b1464;
+      }
+      .glossy{
+        fill:#2d429b;
+      }
+      svg:hover #svg-text{
+        opacity: 1;
+      }
+      #svg-text{
+        transition: opacity 1s;
+        opacity: 0;
+        fill: #595959;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0.03em;
+        text-shadow: 0 0px 6px rgba(97, 97, 97, 0.85);
+      }
+  </style>
+</head>
+<body>
+ <!-- 사각형그리기 -->
+  <svg width="300" height="300" viewbox="0 0 300 300">
+    <rect class="rounded-rect" />
+  </svg>
+
+<!-- 원그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <circle class="svg-circle"/>
+  </svg>
+
+<!-- 타원그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <ellipse class="svg-ellipse" 
+      cx= "150"
+      cy= "150"
+      rx= "100"
+      ry= "50"
+    />
+    <ellipse class="svg-ellipse"
+      cx= "150"
+      cy= "150"
+      rx= "50"
+      ry= "100"
+    />
+    <circle class="start-window" 
+      cx= "150"
+      cy= "100"
+      r= "15"
+    />
+    <circle class="start-window" 
+      cx= "150"
+      cy= "150"
+      r= "15"
+    />
+    <circle class="start-window" 
+      cx= "150"
+      cy= "200"
+      r= "15"
+    />
+  </svg>
+<!-- 라인그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <line class="dark-line"
+      x1="50" y1="50" x2="250" y2="250"  />
+    <line class="dark-line"
+      x1="50" y1="250" x2="250" y2="50"  />
+  </svg>
+<!-- 폴리라인 북두칠성 그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <polyline
+      class="big-dipper"
+      points="218,42.7 199,80.7 137,74.7 131,41 89.3,22.3 66,1 1,8.7" />
+    <circle class="big-dipper__dot" cx="218" cy="42.7" r="7" />
+    <circle class="big-dipper__dot" cx="199" cy="80.7" r="7" />
+    <circle class="big-dipper__dot" cx="137" cy="74.7" r="7" />
+    <circle class="big-dipper__dot" cx="131" cy="41" r="7" />
+    <circle class="big-dipper__dot" cx="89.3" cy="22.3" r="7" />
+    <circle class="big-dipper__dot" cx="66" cy="1" r="7" />
+    <circle class="big-dipper__dot" cx="1" cy="8.7" r="7" />
+      
+  </svg>
+
+
+<!-- 폴리곤과 패스 그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <polygon
+      class="pentagon"
+      points="64,0 0,46.5 24.5,121.8 103.6,121.8 128.1,46.5" />
+      <polygon class="triangle_fill" points="150,93.7 124,112.7 176,112.7 "/>
+      <polygon class="triangle_fill" points="91.3,136.8 101.3,167.4 117.4,118 "/>
+      <polygon class="triangle_fill" points="114.2,206 146.4,205.9 104.3,175.4 "/>
+      <polygon class="triangle_fill" points="187,205.6 196.9,175 154.8,205.5 "/>
+      <polygon class="triangle_fill" points="209.2,136.2 183.1,117.3 199.2,166.8 "/>
+  </svg>
+
+  <svg width="300" height="300" viewBox="">
+      <polygon class="pentagon2" points="150,88.1 86,134.6 110.4,209.9 189.6,209.9 214,134.6 "/>
+      <path class="glossy" d="M206,137.3L150,97l-56.3,40.3l22,64c0,0-1-39.7,34.3-42.3C176.7,157,194,154.3,206,137.3z"/>
+  </svg>
+<!-- 이미지 텍스트 그리기 -->
+  <svg width="300" height="300" viewBox="0 0 300 300">
+    <title>소니 헤드셋</title>
+    <image
+      xlink:href="https://goo.gl/dfXvPQ"
+      x="50"
+      y="50"
+      width="200"
+      height="118.6" />
+    <text id="svg-text" x="105" y="135">소니 헤드셋</text>
+  </svg>
+<!-- 선형 그레디언트 그리기 -->
+  <svg eidth="300" height="300" viewBow="0 0 300 300">
+    <linearGradient id="blue-yellow-gradient" 
+      x1="0" y1="0" 
+      x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00f" stop-opacity="0.5"/>
+    </linearGradient>
+    <rect 
+      fill="url(#blue-yellow-gradient)"
+      x="30"
+      y="30"
+      width="240"
+      height="240"/>
+    <circle
+      fill="url(#blue-yellow-gradient)" cx="150" cy="150"
+      r="100" />
+  </svg>
+<!-- 원형 그레디언트 그리기 -->
+  <svg eidth="300" height="300" viewBow="0 0 300 300">
+      <radialGradient id="rg" 
+        r="0.7"
+        cx="0.5" cy="0.5" 
+        fx="0.5" fy="0.5">
+        <stop offset="0%" stop-color="#ffaf4d" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#56cfe8" stop-opacity="1" />
+      </radialGradient>
+      <rect 
+        fill="url(#rg)"
+        x="30"
+        y="30"
+        width="240"
+        height="240"
+        rx="20"
+        ry="20"/>
+      <circle
+        fill="url(#rg)" cx="150" cy="150"
+        r="100" />
+    </svg>
+</body>
+</html>
