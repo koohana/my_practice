@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML5 Canvas</title>
+  <style>
+      svg {
+        border : 1px solid #aaa;
+      }
+      #rect1{
+        background-color: aqua;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- <img src="assets/images/icon-magnifier.svg" alt="돋보기">
+  <embed src="assets/images/icon-magnifier.svg" type="image/svg+xml">
+  <object data="assets/images/icon-magnifier.svg" type="image/svg+xml"></object>
+  <iframe src="assets/images/icon-magnifier.svg"></iframe>
+  <svg id="magnifier" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" >
+    <style >
+      .line{fill:none;stroke:#000000;stroke-width:8;stroke-miterlimit:10;}
+    </style>
+      <circle class="line" cx="38.5" cy="38.6" r="33.3"/>
+      <line class="line" x1="95.2" y1="94" x2="59.3" y2="58.9"/>
+  </svg> -->
+
+
+
+<!-- <svg width="300" height="300" viewBox="50 100 150 150">
+  <rect x="100" y="100" width="100" height="100"/>
+</svg> -->
+<!-- preseAspectRatio테스트 -->
+<!-- slice -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 50" preserveAspectRatio="xMinYMin slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 100" preserveAspectRatio="xMaxYMax slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 110" preserveAspectRatio="xMidYMin slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 110" preserveAspectRatio="xMidYMid slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 110" preserveAspectRatio="xMidYMax slice">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+<p></p>
+<!-- meet -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 150 50" preserveAspectRatio="xMinYMin meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 150 50" preserveAspectRatio="xMidYMin meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 150 50" preserveAspectRatio="xMaxYMin meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 50" preserveAspectRatio="xMinYMin meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 200" preserveAspectRatio="xMinYMid meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 200" preserveAspectRatio="xMinYMax meet">
+  <style type="text/css">
+    .st0{fill:none;stroke:#000000;stroke-width:14.1732;stroke-miterlimit:10;}
+  </style>
+  <title>알파벳 M</title>
+  <polyline class="st0" points="12,82.4 20.7,23 50.4,77.6 80.7,25 87.3,80.3 "/>
+  <image src="assets/images/m2.png" xlink:href="" alt="대체그래픽" />
+</svg>
+
+
+
+</body>
+</html>
